@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "PowerShell(xcopy \"$env:TEMP\\\\impeccable-skill\\\\.claude\\\\skills\\\\impeccable\" \"$env:USERPROFILE\\\\.claude\\\\skills\\\\impeccable\\\\\" /E /I /Y /Q)",
+      "PowerShell(Remove-Item *)",
+      "PowerShell(git clone https://github.com/leonxlnx/taste-skill.git \"$env:TEMP\\\\taste-skill\")",
+      "PowerShell(Get-ChildItem *)",
+      "Skill(impeccable)",
+      "WebFetch(domain:reservedaily.ukaykhing.com)",
+      "PowerShell(npx create-next-app@latest C:\\\\Users\\\\Maklu\\\\Code\\\\vitalnow --typescript --tailwind --eslint --app --src-dir --no-import-alias --use-npm 2>&1 | Select-Object -Last 20)"
+    ]
+  }
+}
