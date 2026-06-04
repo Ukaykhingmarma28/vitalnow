@@ -1,26 +1,81 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #ffffff;
+  --bg-alt: #f6f6f6;
+  --surface: #ffffff;
+  --surface-dark: #394447;
+  --ink: #0a0a0a;
+  --ink-hero: #000e51;
+  --ink-muted: #737373;
+  --ink-body: rgba(0, 0, 0, 0.7);
+  --brand: #45cbfd;
+  --nav-bg: rgba(216, 216, 216, 0.46);
+  --nav-btn: #050c13;
+  --form-bg: rgba(255, 255, 255, 0.15);
+  --form-shadow: rgba(166, 166, 166, 0.26);
+  --card-text: rgba(255, 255, 255, 0.8);
+  --card-border: rgba(255, 255, 255, 0.2);
+  --border-color: #e5e5e5;
+  --hero-gradient-end: rgba(47, 175, 255, 0.41);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-expo: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-background: var(--bg);
+  --color-foreground: var(--ink);
+  --color-bg-alt: var(--bg-alt);
+  --color-surface: var(--surface);
+  --color-surface-dark: var(--surface-dark);
+  --color-ink: var(--ink);
+  --color-ink-hero: var(--ink-hero);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-body: var(--ink-body);
+  --color-brand: var(--brand);
+  --color-nav-bg: var(--nav-bg);
+  --color-nav-btn: var(--nav-btn);
+  --color-card-text: var(--card-text);
+  --color-card-border: var(--card-border);
+  --color-border: var(--border-color);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-montaga);
+  --font-geist: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html.lenis, html.lenis body {
+  height: auto;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+
+button,
+[role="button"] {
+  transition: transform 160ms var(--ease-out-expo);
+}
+
+button:active,
+[role="button"]:active {
+  transform: scale(0.97);
+}
+
+::selection {
+  background: rgba(69, 203, 253, 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

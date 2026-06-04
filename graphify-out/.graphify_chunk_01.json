@@ -1,0 +1,474 @@
+{
+  "nodes": [
+    {
+      "id": "agents_nextjs_breaking_changes",
+      "label": "Next.js Breaking Changes Warning",
+      "file_type": "rationale",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "claude_project_config",
+      "label": "CLAUDE.md Project Configuration",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_project_overview",
+      "label": "VitalNow README",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "vitalnow_project",
+      "label": "VitalNow Next.js Project",
+      "file_type": "rationale",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "nextjs_framework",
+      "label": "Next.js Framework",
+      "file_type": "rationale",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "vercel_deployment",
+      "label": "Vercel Deployment Platform",
+      "file_type": "rationale",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "geist_font",
+      "label": "Geist Font Family",
+      "file_type": "rationale",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "hero_bg_dna_helix",
+      "label": "Hero Background - DNA Double Helix",
+      "file_type": "image",
+      "source_file": "public/images/hero-bg.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "hero_overlay_dna_helix",
+      "label": "Hero Overlay - DNA Double Helix",
+      "file_type": "image",
+      "source_file": "public/images/hero-overlay.webp",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "vitalnow_logo",
+      "label": "VitalNow Logo - Heartbeat Pulse with Molecular Nodes",
+      "file_type": "image",
+      "source_file": "public/images/logo.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "phone_frame",
+      "label": "iPhone Frame Mockup Shell",
+      "file_type": "image",
+      "source_file": "public/images/phone-frame.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "phone_mockup_vital_ai",
+      "label": "Phone Mockup - Vital AI App Interface",
+      "file_type": "image",
+      "source_file": "public/images/phone-mockup.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "phone_screen_blank",
+      "label": "Phone Screen - Blank White Content Area",
+      "file_type": "image",
+      "source_file": "public/images/phone-screen.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "vital_ai_assistant",
+      "label": "Vital AI Health Assistant",
+      "file_type": "rationale",
+      "source_file": "public/images/phone-mockup.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "blood_report_analysis",
+      "label": "Analyse Blood Report Feature",
+      "file_type": "rationale",
+      "source_file": "public/images/phone-mockup.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "browse_treatments",
+      "label": "Browse Treatments Feature",
+      "file_type": "rationale",
+      "source_file": "public/images/phone-mockup.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "book_ondemand_doctor",
+      "label": "Book On-Demand Doctor Feature",
+      "file_type": "rationale",
+      "source_file": "public/images/phone-mockup.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "book_ondemand_nurse",
+      "label": "Book On-Demand Nurse Feature",
+      "file_type": "rationale",
+      "source_file": "public/images/phone-mockup.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "file_icon_svg",
+      "label": "File Icon SVG",
+      "file_type": "image",
+      "source_file": "public/file.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "globe_icon_svg",
+      "label": "Globe Icon SVG",
+      "file_type": "image",
+      "source_file": "public/globe.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "next_logo_svg",
+      "label": "Next.js Logo SVG",
+      "file_type": "image",
+      "source_file": "public/next.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "vercel_logo_svg",
+      "label": "Vercel Logo SVG",
+      "file_type": "image",
+      "source_file": "public/vercel.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "window_icon_svg",
+      "label": "Window Icon SVG",
+      "file_type": "image",
+      "source_file": "public/window.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "claude_project_config",
+      "target": "agents_nextjs_breaking_changes",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "line 1: @AGENTS.md",
+      "weight": 1.0
+    },
+    {
+      "source": "vitalnow_project",
+      "target": "nextjs_framework",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "line 1: bootstrapped with create-next-app",
+      "weight": 1.0
+    },
+    {
+      "source": "vitalnow_project",
+      "target": "vercel_deployment",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "Deploy on Vercel section",
+      "weight": 0.8
+    },
+    {
+      "source": "vitalnow_project",
+      "target": "geist_font",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "uses next/font to load Geist",
+      "weight": 0.7
+    },
+    {
+      "source": "hero_bg_dna_helix",
+      "target": "hero_overlay_dna_helix",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "public/images/",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "phone_frame",
+      "target": "phone_mockup_vital_ai",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "public/images/",
+      "source_location": null,
+      "weight": 0.9
+    },
+    {
+      "source": "phone_screen_blank",
+      "target": "phone_frame",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "public/images/",
+      "source_location": null,
+      "weight": 0.8
+    },
+    {
+      "source": "vitalnow_logo",
+      "target": "vitalnow_project",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "public/images/logo.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "phone_mockup_vital_ai",
+      "target": "vital_ai_assistant",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "public/images/phone-mockup.png",
+      "source_location": "UI text: Hi! I'm Vital AI",
+      "weight": 1.0
+    },
+    {
+      "source": "vital_ai_assistant",
+      "target": "blood_report_analysis",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "public/images/phone-mockup.png",
+      "source_location": "Quick Actions card: Analyse Blood Report",
+      "weight": 1.0
+    },
+    {
+      "source": "vital_ai_assistant",
+      "target": "browse_treatments",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "public/images/phone-mockup.png",
+      "source_location": "Quick Actions card: Browse Treatments",
+      "weight": 1.0
+    },
+    {
+      "source": "vital_ai_assistant",
+      "target": "book_ondemand_doctor",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "public/images/phone-mockup.png",
+      "source_location": "Quick Actions card: Book On-Demand Doctor",
+      "weight": 1.0
+    },
+    {
+      "source": "vital_ai_assistant",
+      "target": "book_ondemand_nurse",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "public/images/phone-mockup.png",
+      "source_location": "Quick Actions card: Book On-Demand Nurse",
+      "weight": 1.0
+    },
+    {
+      "source": "hero_bg_dna_helix",
+      "target": "vitalnow_project",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "public/images/hero-bg.png",
+      "source_location": null,
+      "weight": 0.8
+    },
+    {
+      "source": "next_logo_svg",
+      "target": "nextjs_framework",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "public/next.svg",
+      "source_location": null,
+      "weight": 0.7
+    },
+    {
+      "source": "vercel_logo_svg",
+      "target": "vercel_deployment",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "public/vercel.svg",
+      "source_location": null,
+      "weight": 0.7
+    },
+    {
+      "source": "book_ondemand_doctor",
+      "target": "book_ondemand_nurse",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "public/images/phone-mockup.png",
+      "source_location": null,
+      "weight": 0.9
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "vital_ai_quick_actions",
+      "label": "Vital AI Quick Actions Feature Set",
+      "nodes": [
+        "vital_ai_assistant",
+        "blood_report_analysis",
+        "browse_treatments",
+        "book_ondemand_doctor",
+        "book_ondemand_nurse"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "public/images/phone-mockup.png"
+    },
+    {
+      "id": "phone_mockup_composites",
+      "label": "Phone Mockup Image Composition",
+      "nodes": [
+        "phone_frame",
+        "phone_mockup_vital_ai",
+        "phone_screen_blank"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "public/images/"
+    },
+    {
+      "id": "hero_section_imagery",
+      "label": "Hero Section Visual Assets",
+      "nodes": [
+        "hero_bg_dna_helix",
+        "hero_overlay_dna_helix",
+        "vitalnow_logo"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "public/images/"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

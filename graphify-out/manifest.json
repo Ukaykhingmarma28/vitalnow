@@ -1,0 +1,177 @@
+{
+  "C:\\Users\\Maklu\\Code\\vitalnow\\eslint.config.mjs": {
+    "mtime": 1780213414.8455882,
+    "ast_hash": "dfa1f5f6a7037bf39dc510f30b180002",
+    "semantic_hash": "dfa1f5f6a7037bf39dc510f30b180002"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\next-env.d.ts": {
+    "mtime": 1780238840.6840265,
+    "ast_hash": "d0f8375ae1199dc7acd3977fc33b78b8",
+    "semantic_hash": "d0f8375ae1199dc7acd3977fc33b78b8"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\next.config.ts": {
+    "mtime": 1780218743.403488,
+    "ast_hash": "cb708c373661fa847e0c13ca8cf0eef0",
+    "semantic_hash": "cb708c373661fa847e0c13ca8cf0eef0"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\package.json": {
+    "mtime": 1780223558.7078724,
+    "ast_hash": "960b26fcaadec985d490e1c9a092c9c1",
+    "semantic_hash": "960b26fcaadec985d490e1c9a092c9c1"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\postcss.config.mjs": {
+    "mtime": 1780213414.8909054,
+    "ast_hash": "239f3ebf717465dc636818a1a619398d",
+    "semantic_hash": "239f3ebf717465dc636818a1a619398d"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\tsconfig.json": {
+    "mtime": 1780213415.3075984,
+    "ast_hash": "ee17fd1c97c735e9f3564e3f5251f125",
+    "semantic_hash": "ee17fd1c97c735e9f3564e3f5251f125"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\src\\app\\layout.tsx": {
+    "mtime": 1780220973.7109897,
+    "ast_hash": "7a68bdb29e7517d321398d39030a07c6",
+    "semantic_hash": "7a68bdb29e7517d321398d39030a07c6"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\src\\app\\page.tsx": {
+    "mtime": 1780382006.513175,
+    "ast_hash": "723d3aaf09b99d867d407445cba00d1f",
+    "semantic_hash": "723d3aaf09b99d867d407445cba00d1f"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\src\\components\\cta-section.tsx": {
+    "mtime": 1780217648.9652872,
+    "ast_hash": "666f85d4ffb9331bc512ad06fdd2c621",
+    "semantic_hash": "666f85d4ffb9331bc512ad06fdd2c621"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\src\\components\\faq.tsx": {
+    "mtime": 1780217640.665517,
+    "ast_hash": "36601fc1836ef5948cc70cf4030b9b4a",
+    "semantic_hash": "36601fc1836ef5948cc70cf4030b9b4a"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\src\\components\\features.tsx": {
+    "mtime": 1780219920.247636,
+    "ast_hash": "0ecc720b3f54b7df3bceceba989c8c6c",
+    "semantic_hash": "0ecc720b3f54b7df3bceceba989c8c6c"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\src\\components\\footer-cta.tsx": {
+    "mtime": 1780214141.5025644,
+    "ast_hash": "857635f65338f75c4274226ad88bf237",
+    "semantic_hash": "857635f65338f75c4274226ad88bf237"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\src\\components\\footer.tsx": {
+    "mtime": 1780217665.153278,
+    "ast_hash": "fa4b1831c73cbcf063f4b01d86c2f871",
+    "semantic_hash": "fa4b1831c73cbcf063f4b01d86c2f871"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\src\\components\\hero.tsx": {
+    "mtime": 1780242968.3877268,
+    "ast_hash": "ee92f0d9ad9ef59cbfa7056ee4f983a0",
+    "semantic_hash": "ee92f0d9ad9ef59cbfa7056ee4f983a0"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\src\\components\\how-it-works.tsx": {
+    "mtime": 1780214124.3771906,
+    "ast_hash": "b031ca0318ce49ef91b2abb5639ef204",
+    "semantic_hash": "b031ca0318ce49ef91b2abb5639ef204"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\src\\components\\navbar.tsx": {
+    "mtime": 1780238065.8213396,
+    "ast_hash": "f4997a524faa98e16970210209299bc6",
+    "semantic_hash": "f4997a524faa98e16970210209299bc6"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\src\\components\\particle-field.tsx": {
+    "mtime": 1780217534.8108287,
+    "ast_hash": "5eb316477041be63fa56814ea8f65129",
+    "semantic_hash": "5eb316477041be63fa56814ea8f65129"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\src\\components\\smooth-scroll.tsx": {
+    "mtime": 1780223570.2380836,
+    "ast_hash": "e3befc26df4cf6fa57bae60a46f71579",
+    "semantic_hash": "e3befc26df4cf6fa57bae60a46f71579"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\src\\components\\stats.tsx": {
+    "mtime": 1780217605.7590058,
+    "ast_hash": "202983cdd7e6a21f379a3034ee141723",
+    "semantic_hash": "202983cdd7e6a21f379a3034ee141723"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\src\\components\\trust-section.tsx": {
+    "mtime": 1780217621.7852783,
+    "ast_hash": "d50e7ad8fd0ae3286df00481f766d3a8",
+    "semantic_hash": "d50e7ad8fd0ae3286df00481f766d3a8"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\src\\components\\waitlist-form.tsx": {
+    "mtime": 1780220714.9505112,
+    "ast_hash": "17f0d2daeeb51080a3a7f01acc49319d",
+    "semantic_hash": "17f0d2daeeb51080a3a7f01acc49319d"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\AGENTS.md": {
+    "mtime": 1780213481.271058,
+    "ast_hash": "9e09241799026ac05be315a2f0b50055",
+    "semantic_hash": "9e09241799026ac05be315a2f0b50055"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\CLAUDE.md": {
+    "mtime": 1780213481.271058,
+    "ast_hash": "5c27369b226fcf2be8a6cfe52224e767",
+    "semantic_hash": "5c27369b226fcf2be8a6cfe52224e767"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\README.md": {
+    "mtime": 1780213414.812942,
+    "ast_hash": "f15aaa42d5d299d091b1171097ea56ad",
+    "semantic_hash": "f15aaa42d5d299d091b1171097ea56ad"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\public\\file.svg": {
+    "mtime": 1780213414.905507,
+    "ast_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71",
+    "semantic_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\public\\globe.svg": {
+    "mtime": 1780213414.9230866,
+    "ast_hash": "2aaafa6a49b6563925fe440891e32717",
+    "semantic_hash": "2aaafa6a49b6563925fe440891e32717"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\public\\next.svg": {
+    "mtime": 1780213414.9422426,
+    "ast_hash": "8e061864f388b47f33a1c3780831193e",
+    "semantic_hash": "8e061864f388b47f33a1c3780831193e"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\public\\vercel.svg": {
+    "mtime": 1780213414.958843,
+    "ast_hash": "c0af2f507b369b085b35ef4bbe3bcf1e",
+    "semantic_hash": "c0af2f507b369b085b35ef4bbe3bcf1e"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\public\\window.svg": {
+    "mtime": 1780213414.9758961,
+    "ast_hash": "a2760511c65806022ad20adf74370ff3",
+    "semantic_hash": "a2760511c65806022ad20adf74370ff3"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\public\\images\\hero-bg.png": {
+    "mtime": 1780216125.2953894,
+    "ast_hash": "23ae2578b80391fb6baab14f80802ea9",
+    "semantic_hash": "23ae2578b80391fb6baab14f80802ea9"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\public\\images\\hero-overlay.webp": {
+    "mtime": 1780219672.868271,
+    "ast_hash": "501e3a5e3d3402f5998789897d814621",
+    "semantic_hash": "501e3a5e3d3402f5998789897d814621"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\public\\images\\logo.png": {
+    "mtime": 1780216126.8494027,
+    "ast_hash": "150da315d7ca928987d89e3a8b58d21c",
+    "semantic_hash": "150da315d7ca928987d89e3a8b58d21c"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\public\\images\\phone-frame.png": {
+    "mtime": 1780216126.2727807,
+    "ast_hash": "b40573664e3e9451ce1cfbd89b30b44f",
+    "semantic_hash": "b40573664e3e9451ce1cfbd89b30b44f"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\public\\images\\phone-mockup.png": {
+    "mtime": 1780219576.8349037,
+    "ast_hash": "03762263dd3079fd967284826a972516",
+    "semantic_hash": "03762263dd3079fd967284826a972516"
+  },
+  "C:\\Users\\Maklu\\Code\\vitalnow\\public\\images\\phone-screen.png": {
+    "mtime": 1780216125.721373,
+    "ast_hash": "831c004fe0a0352357219f50937aaf16",
+    "semantic_hash": "831c004fe0a0352357219f50937aaf16"
+  }
+}
