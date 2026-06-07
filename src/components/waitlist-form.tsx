@@ -1,6 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { ConsentDialog } from "./consent-dialog";
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export function WaitlistForm({
   variant = "hero",
@@ -8,16 +11,52 @@ export function WaitlistForm({
   variant?: "hero" | "default" | "split";
 }) {
   const [email, setEmail] = useState("");
+  const [error, setError] = useState<string | null>(null);
+  const [dialogOpen, setDialogOpen] = useState(false);
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  // Validate the email; only open the consent dialog when it is valid.
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) return;
+    if (!EMAIL_RE.test(email.trim())) {
+      setError("Please enter a valid email address.");
+      return;
+    }
+    setError(null);
+    setDialogOpen(true);
+  };
+
+  // Runs after the user accepts terms in the dialog: persist + send the email.
+  const handleConfirm = async (marketingOptIn: boolean) => {
+    setDialogOpen(false);
     setStatus("loading");
-    await new Promise((resolve) => setTimeout(resolve, 1200));
-    setStatus("success");
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: email.trim(),
+          marketingOptIn,
+          terms: true,
+        }),
+      });
+      if (!res.ok) {
+        const data = (await res.json().catch(() => null)) as
+          | { error?: string }
+          | null;
+        throw new Error(data?.error || "Request failed");
+      }
+      setStatus("success");
+    } catch (err) {
+      setStatus("idle");
+      setError(
+        err instanceof Error && err.message
+          ? err.message
+          : "Something went wrong. Please try again."
+      );
+    }
   };
 
   if (status === "success") {
@@ -43,10 +82,13 @@ export function WaitlistForm({
     );
   }
 
+  let formEl: React.ReactNode;
+
   if (variant === "hero") {
-    return (
+    formEl = (
       <form
         onSubmit={handleSubmit}
+        noValidate
         className="flex items-center w-full rounded-full p-[6px]"
         style={{
           background: "rgba(255, 255, 255, 0.32)",
@@ -60,10 +102,13 @@ export function WaitlistForm({
       >
         <input
           type="email"
-          required
+          aria-label="Email address"
           placeholder="Your email address"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => {
+            setEmail(e.target.value);
+            if (error) setError(null);
+          }}
           className="flex-1 bg-transparent px-5 py-3 text-[14px] text-[#0c1320] placeholder:text-[#1a2a35]/55 focus:outline-none min-w-0"
         />
         <button
@@ -80,12 +125,11 @@ export function WaitlistForm({
         </button>
       </form>
     );
-  }
-
-  if (variant === "split") {
-    return (
+  } else if (variant === "split") {
+    formEl = (
       <form
         onSubmit={handleSubmit}
+        noValidate
         className="flex flex-col gap-3 w-full"
         id="waitlist"
       >
@@ -115,10 +159,13 @@ export function WaitlistForm({
           </svg>
           <input
             type="email"
-            required
+            aria-label="Email address"
             placeholder="Your email address"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              if (error) setError(null);
+            }}
             className="flex-1 bg-transparent px-3 py-3 text-[14px] text-[#0c1320] placeholder:text-[#1a2a35]/55 focus:outline-none min-w-0"
           />
         </div>
@@ -150,34 +197,60 @@ export function WaitlistForm({
         </button>
       </form>
     );
+  } else {
+    formEl = (
+      <form
+        onSubmit={handleSubmit}
+        noValidate
+        className="flex flex-col sm:flex-row gap-3"
+        id="waitlist-bottom"
+      >
+        <input
+          type="email"
+          aria-label="Email address"
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => {
+            setEmail(e.target.value);
+            if (error) setError(null);
+          }}
+          className="flex-1 bg-bg-alt border border-border rounded-full px-5 py-3 text-sm text-ink placeholder:text-ink-muted focus:outline-none focus:border-brand/50 focus:ring-1 focus:ring-brand/20 transition-all duration-200"
+          style={{ transitionTimingFunction: "var(--ease-out-expo)" }}
+        />
+        <button
+          type="submit"
+          disabled={status === "loading"}
+          className="bg-nav-btn text-white font-medium text-sm px-7 py-3 rounded-full hover:opacity-90 disabled:opacity-60 transition-all duration-200 cursor-pointer"
+        >
+          {status === "loading" ? (
+            <span className="inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+          ) : (
+            "Join Waitlist"
+          )}
+        </button>
+      </form>
+    );
   }
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="flex flex-col sm:flex-row gap-3"
-      id="waitlist-bottom"
-    >
-      <input
-        type="email"
-        required
-        placeholder="Enter your email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        className="flex-1 bg-bg-alt border border-border rounded-full px-5 py-3 text-sm text-ink placeholder:text-ink-muted focus:outline-none focus:border-brand/50 focus:ring-1 focus:ring-brand/20 transition-all duration-200"
-        style={{ transitionTimingFunction: "var(--ease-out-expo)" }}
+    <>
+      {formEl}
+      {error && (
+        <p
+          role="alert"
+          className={`text-[13px] text-[#c0362c] mt-2 ${
+            variant === "default" ? "text-center sm:text-left" : "pl-1"
+          }`}
+        >
+          {error}
+        </p>
+      )}
+      <ConsentDialog
+        open={dialogOpen}
+        email={email.trim()}
+        onClose={() => setDialogOpen(false)}
+        onConfirm={handleConfirm}
       />
-      <button
-        type="submit"
-        disabled={status === "loading"}
-        className="bg-nav-btn text-white font-medium text-sm px-7 py-3 rounded-full hover:opacity-90 disabled:opacity-60 transition-all duration-200 cursor-pointer"
-      >
-        {status === "loading" ? (
-          <span className="inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-        ) : (
-          "Join Waitlist"
-        )}
-      </button>
-    </form>
+    </>
   );
 }

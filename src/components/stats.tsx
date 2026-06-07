@@ -35,11 +35,17 @@ export function Stats() {
     const section = sectionRef.current;
     if (!section) return;
 
+    const items = section.querySelectorAll<HTMLElement>(".stat-item");
+    items.forEach((el) => {
+      el.style.opacity = "0";
+      el.style.transform = "translateY(24px)";
+    });
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           anime({
-            targets: section.querySelectorAll(".stat-item"),
+            targets: items,
             opacity: [0, 1],
             translateY: [24, 0],
             duration: 800,
@@ -47,11 +53,11 @@ export function Stats() {
             delay: anime.stagger(100),
           });
           anime({
-            targets: section.querySelector(".timeline-bar-fill"),
-            scaleX: [0, 1],
-            duration: 1200,
-            easing: "easeOutExpo",
-            delay: 400,
+            targets: section.querySelectorAll(".timeline-dot"),
+            scale: [0, 1],
+            duration: 600,
+            easing: "easeOutBack",
+            delay: anime.stagger(140, { start: 400 }),
           });
           observer.disconnect();
         }
@@ -64,60 +70,79 @@ export function Stats() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-10" id="how-it-works">
+    <section ref={sectionRef} className="py-24 px-6 md:px-10" id="how-it-works">
       <div className="max-w-[1200px] mx-auto">
-        <p className="text-ink-muted text-[19.2px] uppercase tracking-[0.5px] mb-2">
-          Built for precision
-        </p>
-        <h2 className="text-[44.8px] font-normal tracking-[-1.2px] leading-[56px] text-ink max-w-[672px]">
-          Your health, analyzed in seconds.
-        </h2>
-        <p className="text-ink text-[13px] leading-7 max-w-[672px] mt-4 mb-12">
-          No appointments, no waiting rooms. Upload your blood panel and get
-          clinically grounded insights immediately.
-        </p>
+        {/* Header */}
+        <div className="max-w-[672px]">
+          <p className="text-ink-muted text-[15px] md:text-[18.8px] uppercase tracking-[0.5px] leading-7 mb-2">
+            Built for precision
+          </p>
+          <h2 className="font-display text-[32px] md:text-[37.8px] text-[#050c13] tracking-[-1.2px] leading-[1.06]">
+            Your health, analyzed in seconds.
+          </h2>
+          <p className="text-[#394447] text-[15px] leading-relaxed mt-6">
+            No appointments, no waiting rooms. Upload your blood panel and get
+            clinically grounded insights immediately.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
+        {/* MOBILE: stats with a vertical rail, a dot aligned to each stat */}
+        <div className="mt-14 flex flex-col gap-10 md:hidden">
           {stats.map((stat, i) => (
-            <div
-              key={stat.value}
-              className={`stat-item opacity-0 py-6 px-6 ${
-                i < stats.length - 1
-                  ? "md:border-r md:border-border"
-                  : ""
-              }`}
-            >
-              <p className="text-[44.8px] font-normal tracking-[-1.2px] text-ink leading-tight mb-4">
+            <div key={stat.value} className="stat-item relative pl-8">
+              {/* connector line down to the next dot */}
+              {i < stats.length - 1 && (
+                <span className="absolute left-[5.5px] top-[18px] h-[calc(100%+40px)] w-px bg-[rgba(5,12,19,0.1)]" />
+              )}
+              {/* dot aligned with the stat heading */}
+              <span className="timeline-dot absolute left-0 top-[12px] w-3 h-3 rounded-full bg-[#050c13] z-10" />
+              <p className="text-[#050c13] text-[23px] tracking-[-0.6px] leading-9 mb-2">
                 {stat.value}
               </p>
-              <p className="text-ink-body text-[13.2px] leading-6">
+              <p className="text-[#394447] text-[13px] leading-normal">
                 {stat.description}
               </p>
             </div>
           ))}
         </div>
 
-        {/* Timeline */}
-        <div className="mt-12 relative">
-          <div className="h-[6px] bg-border rounded-full overflow-hidden">
-            <div
-              className="timeline-bar-fill h-full bg-brand/40 rounded-full origin-left"
-              style={{ transform: "scaleX(0)" }}
-            />
-          </div>
-          <div className="flex justify-between mt-4">
-            {timeline.map((label, i) => (
-              <div key={label} className="flex flex-col items-center">
-                <div
-                  className={`w-3 h-3 rounded-full -mt-[27px] mb-2 ${
-                    i === 0 ? "bg-ink" : "bg-border"
-                  }`}
-                />
-                <span className="text-ink-muted text-xs uppercase tracking-wider">
-                  {label}
-                </span>
+        {/* DESKTOP: 3-col stats + horizontal timeline */}
+        <div className="mt-16 hidden md:flex flex-col gap-10">
+          <div className="grid grid-cols-3 gap-8">
+            {stats.map((stat) => (
+              <div
+                key={stat.value}
+                className="stat-item border-l border-[rgba(5,12,19,0.2)] pl-[25px]"
+              >
+                <p className="text-[#050c13] text-[23px] tracking-[-0.6px] leading-10 mb-2">
+                  {stat.value}
+                </p>
+                <p className="text-[#394447] text-[13px] leading-normal">
+                  {stat.description}
+                </p>
               </div>
             ))}
+          </div>
+
+          <div className="flex flex-col gap-4 max-w-[1200px]">
+            <div className="relative grid grid-cols-3 h-3">
+              <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 h-1 rounded-full bg-[rgba(5,12,19,0.1)]" />
+              {timeline.map((label) => (
+                <div key={label} className="flex justify-center items-center">
+                  <span className="timeline-dot w-3 h-3 rounded-full bg-[#050c13]" />
+                </div>
+              ))}
+            </div>
+            <div className="grid grid-cols-3">
+              {timeline.map((label) => (
+                <span
+                  key={label}
+                  className="text-center text-[#4b585b] text-xs uppercase tracking-[2.4px] leading-6"
+                >
+                  {label}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>

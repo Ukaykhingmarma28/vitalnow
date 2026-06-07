@@ -1,26 +1,17 @@
 import type { Metadata } from "next";
-import { Inter, Montaga, Geist, Geist_Mono } from "next/font/google";
+import { Montaga, Geist } from "next/font/google";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+// Two-font system: Geist (sans, body) + Montaga (serif, display).
+const geistSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
 const montaga = Montaga({
   variable: "--font-montaga",
   weight: "400",
-  subsets: ["latin"],
-});
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
@@ -44,9 +35,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${montaga.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
+      className={`${geistSans.variable} ${montaga.variable} antialiased`}
     >
-      <body className="min-h-[100dvh]">
+      <body className="min-h-[100dvh]" suppressHydrationWarning>
         <SmoothScroll />
         {children}
       </body>

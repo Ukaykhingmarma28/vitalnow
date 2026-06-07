@@ -105,10 +105,10 @@ export function Hero() {
             >
               <div className="relative w-[260px] md:w-[280px] lg:w-[310px] xl:w-[350px] lg:mb-[-40px]">
                 <Image
-                  src="/images/phone-mockup.png"
-                  alt="Vital AI chat showing health analysis and quick actions"
-                  width={300}
-                  height={612}
+                  src="/images/app-phone-mockup.png"
+                  alt="Vital AI app showing a health report analysis and quick actions"
+                  width={433}
+                  height={883}
                   className="w-full h-auto"
                   style={{
                     filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.08))",

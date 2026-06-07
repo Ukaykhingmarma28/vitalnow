@@ -35,7 +35,13 @@
       "PowerShell(npm run *)",
       "mcp__ide__getDiagnostics",
       "Bash(npx playwright *)",
-      "Bash(node *)"
+      "Bash(node *)",
+      "Bash(curl -LsSf https://astral.sh/uv/install.sh)",
+      "Bash(sh)",
+      "Read(//Users/ukaykhing/Downloads/**)",
+      "Bash(grep -oiE 'fill=\"#[0-9A-Fa-f]{3,6}\"' '/Users/ukaykhing/Downloads/VitalNow_Logo-Final-04 1.svg')",
+      "Bash(curl -s -o app-phone-mockup.png \"https://www.figma.com/api/mcp/asset/175872f7-8bca-483f-baf0-3e017958dc77\")",
+      "Bash(npx tsc *)"
     ]
   }
 }

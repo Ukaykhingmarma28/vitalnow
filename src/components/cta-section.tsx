@@ -16,16 +16,23 @@ export function CtaSection() {
     const section = sectionRef.current;
     if (!section) return;
 
+    // Pre-animation state in JS so reduced-motion users always see content.
+    const reveals = section.querySelectorAll<HTMLElement>(".cta-reveal");
+    reveals.forEach((el) => {
+      el.style.opacity = "0";
+      el.style.transform = "translateY(20px)";
+    });
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           anime({
-            targets: section.querySelectorAll(".cta-reveal"),
+            targets: reveals,
             opacity: [0, 1],
             translateY: [20, 0],
-            duration: 700,
+            duration: 800,
             easing: "easeOutExpo",
-            delay: anime.stagger(60),
+            delay: anime.stagger(80),
           });
           observer.disconnect();
         }
@@ -38,30 +45,28 @@ export function CtaSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-10 border-t border-border">
-      <div className="max-w-[832px] mx-auto">
-        <h2 className="cta-reveal opacity-0 text-[44.8px] font-normal tracking-[-1.2px] leading-[56px] text-ink">
-          Ready to understand your health better?
+    <section ref={sectionRef} className="px-6 md:px-10 py-32 md:py-44">
+      <div className="max-w-[640px] mx-auto flex flex-col items-center text-center">
+        <div className="cta-reveal h-px w-10 bg-[rgba(5,12,19,0.22)] mb-10" />
+
+        <h2 className="cta-reveal font-display text-[#050c13] text-[40px] md:text-[60px] leading-[1.03] tracking-[-1.8px]">
+          Know your numbers.
+          <br />
+          Start with one report.
         </h2>
-        <p className="cta-reveal opacity-0 text-ink text-[13px] leading-7 mt-4 mb-8 max-w-[672px]">
-          Stop guessing about your blood work. Join the waitlist and be among
-          the first to get clinically grounded insights and a personalized
-          recovery plan.
+
+        <p className="cta-reveal text-[#5a6166] text-[15px] md:text-base leading-relaxed mt-6 max-w-[440px]">
+          Upload a single blood report and get a clear, clinically grounded
+          picture of where your health stands.
         </p>
-        <div className="cta-reveal opacity-0 flex flex-wrap items-center gap-4">
-          <a
-            href="#waitlist"
-            className="bg-nav-btn text-white text-sm font-normal px-5 py-3 rounded-full hover:opacity-90 transition-opacity duration-200"
-          >
-            Join Waitlist
-          </a>
-          <a
-            href="mailto:hello@reservedaily.com"
-            className="text-ink text-sm font-normal hover:text-ink-muted transition-colors duration-200"
-          >
-            Contact us
-          </a>
+
+        <div className="cta-reveal w-full max-w-[440px] mt-10">
+          <WaitlistForm variant="default" />
         </div>
+
+        <p className="cta-reveal text-[#1a2a35]/45 text-[12px] mt-4">
+          No spam. Unsubscribe anytime.
+        </p>
       </div>
     </section>
   );

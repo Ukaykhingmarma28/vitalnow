@@ -39,10 +39,9 @@
   --color-card-text: var(--card-text);
   --color-card-border: var(--card-border);
   --color-border: var(--border-color);
-  --font-sans: var(--font-inter);
+  /* Two-font system: Geist (sans, body) + Montaga (display). */
+  --font-sans: var(--font-geist-sans);
   --font-display: var(--font-montaga);
-  --font-geist: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 html.lenis, html.lenis body {
@@ -52,7 +51,7 @@ html.lenis, html.lenis body {
 body {
   background: var(--bg);
   color: var(--ink);
-  font-family: var(--font-inter), system-ui, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
 
 
